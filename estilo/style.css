@@ -82,10 +82,8 @@ header a::after {
 section {
     padding-top: 9vh; /* vh = viewport height */
     padding-bottom: 9vh; 
-    line-height: 1.8em; /* Distancia entre linhas do texto */
     padding-left: 30px;
     font-family: var(--fonte1);
-    font-size: 3vw;
     /* 
         O padding de cada uma das section tem 10% da altura da viewport, portanto, os paddings 
         das section variam na mesma proporção da variação da viewport.
@@ -94,6 +92,8 @@ section {
 
 section > p {
     padding-bottom: 2em;
+    font-size: 5vw;
+    line-height: 1.8em; /* Distancia entre linhas do texto */
 }
 
 section.imagem > p { /* Os parágrafos das section de classe imagem....*/
@@ -114,7 +114,7 @@ section.imagem{
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.498);
     box-shadow: inset 8px 8px 15px 0px rgba(0, 0, 0, 0.642);
     background-size: cover;
-    background-position: right center;
+    background-position: 50% 80%;
     background-attachment: fixed;
 }
 
