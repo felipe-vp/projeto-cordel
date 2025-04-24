@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/*
+    É uma instrução que deve ser declarada na primeira linha do arquivo,
+    é uma regra (at-rule) para definir a codificação do conjunto de
+    caracteres do documento CSS para ser compilado pelo navegador, decifrando 
+    corretamente cada caracter.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+/*
+    É uma instrução para importar (carregar) outros arquivos CSS, nesse caso,
+    para importar um arquivo CSS de uma fonte específica.  
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+:root {
+    --fonte1: "Jersey 10", sans-serif;
+    --fonte2: Verdana, Geneva, Tahoma, sans-serif;
+    /*
+        O seletor :root{} em CSS equivale ao elemento <html>, é analogo de html{},
+        seleciona apenas o elemento raiz do documento HTML: <html>.
+        Mas em comparação direta, a pseudo-classe root tem maior prioridade, 
+        prevalece sobre as propriedades de html{}.
+        As variáveis CSS (custom properties) são propriedades personalizadas.
+        Por convenção, as variáveis  são configuradas em root devido ao seu escopo global.
+
+        Sintaxe de variáveis CSS:
+        --minhaVariavel: valor;
+
+        Sintaxe de aplicação:
+        :root { --minhaVariavel: valor; }
+        div { propriedade: var(--minhaVariavel); }
+    */
+}
+
+html, body {
+    font-family: var(--fonte1);
+    min-height: 100vh; 
+    background-color: darkgray;
+    /* 
+        A altura minima dos elementos html e body é igual a 100% a altura da viewport, 
+        portanto, o background-color sempre vai se adaptar a viewport independente do tamanho do seu conteúdo. 
+    */
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 20px;
+    font-variant: small-caps;
+    font-size: 13vw;
+}
+
+header > p {
+    padding-bottom: 20px;
+    font-size: 3vw;
+}
+
+header a,  footer a {
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover, footer a:hover {
+    transition: 0.7s;
+    color: yellow;
+}
+
+header a::after {
+    content: '\1f517\00A0';
+}
+
+section {
+    padding-top: 9vh; /* vh = viewport height */
+    padding-bottom: 9vh; 
+    line-height: 1.8em; /* Distancia entre linhas do texto */
+    padding-left: 30px;
+    font-family: var(--fonte1);
+    font-size: 3vw;
+    /* 
+        O padding de cada uma das section tem 10% da altura da viewport, portanto, os paddings 
+        das section variam na mesma proporção da variação da viewport.
+    */
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.imagem > p { /* Os parágrafos das section de classe imagem....*/
+    background-color: rgba(0, 0, 0, 0.263);
+    display: inline-block;
+    padding: 5px;
+}
+
+section.normal {
+    background-color: rgba(255, 255, 255, 0.865);
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.409);
+}
+
+section.imagem{ 
+    background-color: rgba(48, 47, 47, 0.712);
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.498);
+    box-shadow: inset 8px 8px 15px 0px rgba(0, 0, 0, 0.642);
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+}
+    
+footer {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    text-align: center; 
+    font-size: 2vw;
+}
+
+
+
