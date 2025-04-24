@@ -62,7 +62,7 @@ header > h1 {
 
 header > p {
     padding-bottom: 20px;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 
 header a,  footer a {
@@ -92,8 +92,9 @@ section {
 
 section > p {
     padding-bottom: 2em;
-    font-size: 5vw;
+    font-size: clamp(24px, 5vw, 42px);
     line-height: 1.8em; /* Distancia entre linhas do texto */
+
 }
 
 section.imagem > p { /* Os parágrafos das section de classe imagem....*/
@@ -114,7 +115,7 @@ section.imagem{
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.498);
     box-shadow: inset 8px 8px 15px 0px rgba(0, 0, 0, 0.642);
     background-size: cover;
-    background-position: 50% 80%;
+    background-position: 65% 70%;
     background-attachment: fixed;
 }
 
